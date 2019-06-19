@@ -74,7 +74,7 @@ font-3 = Noto Color Emoji:pixelsize=10:scale=10;0
 modules-left = bspwm
 modules-center = 
 ; modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = pulseaudio wlan eth battery date time powermenu
+modules-right = pulseaudio xbacklight battery  wlan eth date time powermenu
 
 tray-position = right
 tray-padding = 0
@@ -197,22 +197,12 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-; [module/xbacklight]
-; type = internal/xbacklight
-;
-; format = <label> <bar>
-; label = brightness
-;
-; bar-width = 10
-; bar-indicator = |
-; bar-indicator-foreground = #fff
-; bar-indicator-font = 2
-; bar-fill = ─
-; bar-fill-font = 2
-; bar-fill-foreground = #9f78e1
-; bar-empty = ─
-; bar-empty-font = 2
-; bar-empty-foreground = ${colors.foreground-alt}
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label>
+format-underline = ${colors.alert}
+label =  %percentage%%
 
 ; [module/backlight-acpi]
 ; inherit = module/xbacklight
@@ -362,10 +352,10 @@ battery = BAT1
 adapter = ACAD
 full-at = 98
 
-format-charging = <label-charging> <animation-charging> 
+format-charging = <animation-charging> <label-charging>  
 format-charging-underline = ${colors.green}
 
-format-discharging = <label-discharging> <animation-discharging> 
+format-discharging = <animation-discharging> <label-discharging> 
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
