@@ -18,10 +18,9 @@ Plugin 'mhartington/oceanic-next'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'godlygeek/tabular'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'reedes/vim-pencil'
 Plugin 'fatih/vim-go'
 " Plugin 'neoclide/coc.nvim'
-Plugin 'dart-lang/dart-vim-plugin'
-Plugin 'thosakwe/vim-flutter'
 Plugin 'w0rp/ale'
 Plugin 'iamcco/markdown-preview.nvim'
 call vundle#end()            
@@ -50,12 +49,6 @@ set expandtab
 
 " handle all mapping command
 let mapleader=','
-" flutter
-noremap <silent> <leader>fa :FlutterRun<CR>
-noremap <silent> <leader>fq :FlutterQuit<CR>
-noremap <silent> <leader>fr :FlutterHotReload<CR>
-noremap <silent> <leader>fR :FlutterHotRestart<CR>
-noremap <silent> <leader>fD :FlutterVisualDebug<CR>
 " save
 noremap <silent> <Leader>wq :wq<CR>
 noremap <silent> <Leader>qq :q!<CR>

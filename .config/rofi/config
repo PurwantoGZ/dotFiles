@@ -1,12 +1,13 @@
 /* !!! Rofi config file !!! */
-rofi.lines                : 12
-rofi.font                 : Monaco 13
+rofi.lines                : 15
+rofi.font                 : Monaco 12
+rofi.padding              : 48
 /* rofi.fake-transparency    : false */
 rofi.show-icons           : true
 rofi.theme                : ~/.config/rofi/theme/oceanicnext.rasi
 /* rofi.display-window       : Window: */
 rofi.display-drun         : Apps
-rofi.display-run          : Type a command
+rofi.display-run          : Cmmd 
 /* rofi.display-keys         : key: */
 /* rofi.sidebar-mode         : false */
 rofi.modi                 : drun,run
@@ -14,7 +15,7 @@ rofi.modi                 : drun,run
 /* rofi.drun-match-fields    : name */
 /* rofi.window-match-fields  : name */
 /* rofi.columns              : 1 */
-rofi.width                : 350
+rofi.width                : 500
 /* rofi.columns              : 1 */
 rofi.terminal             : st
 /* !rofi.pid                  : /tmp/rofi.pid */

@@ -16,15 +16,6 @@
 ; background-alt = #073642
 ; alert = #CB4B16
 
-; [colors]
-; foreground = #BCC3C3
-; background = #1b2b34
-; foreground-alt = #56696F
-; background-alt = #073642
-; primary = #ffb52a
-; secondary = #e60053
-; alert = #CB4B16
-
 ; oceanicnext color
 [colors]
 foreground = #d8dee9
@@ -40,16 +31,15 @@ purple = #c594c5
 brown = #ab7967
 alert = #fac863
 
-
 [bar/alfianbar]
 monitor = ${env:MONITOR:eDP-1}
 width = 100%
 height = 27
 bottom = false
-;offset-x = 1%
-;offset-y = 1%
+; offset-x = 1%
+; offset-y = 1%
 radius = 0
-fixed-center = false
+fixed-center = false;
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -57,7 +47,9 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 0
+border-top = 5
+border-left = 5
+border-right = 5
 border-color = #00000000
 
 padding-left = 0
@@ -66,10 +58,9 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Monaco:pixelsize=10;1
+font-0 = Monaco:size=10:antialias=true;0
 font-1 = FontAwesome:size=10:antialias=true;0
-font-2 = Siji:pixelsize=10;1
-font-3 = Noto Color Emoji:pixelsize=10:scale=10;0
+font-2 = Noto Color Emoji:pixelsize=10:scale=10;0
 
 modules-left = bspwm
 modules-center = 
@@ -233,7 +224,6 @@ interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.blue}
 label-connected = %essid%
-label-connected-font = 3
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -292,7 +282,6 @@ label = %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-; format-volume = <label-volume> <bar-volume>
 format-volume = <label-volume>
 format-volume-underline = ${colors.secondary}
 label-volume =  %percentage%%
@@ -300,51 +289,6 @@ label-volume-foreground = ${root.foreground}
 
 label-muted =  muted
 label-muted-foreground = #666
-
-; bar-volume-width = 8
-; bar-volume-foreground-0 = ${colors.secondary}
-; bar-volume-foreground-1 = ${colors.secondary}
-; bar-volume-foreground-2 = ${colors.secondary}
-; bar-volume-foreground-3 = ${colors.secondary}
-; bar-volume-foreground-4 = ${colors.secondary}
-; bar-volume-foreground-5 = ${colors.alert}
-; bar-volume-foreground-6 = ${colors.red}
-; bar-volume-gradient = false
-; bar-volume-indicator = |
-; bar-volume-indicator-font = 2
-; bar-volume-fill = ─
-; bar-volume-fill-font = 2
-; bar-volume-empty = ─
-; bar-volume-empty-font = 2
-; bar-volume-empty-foreground = ${colors.foreground-alt}
-
-; [module/alsa]
-; type = internal/alsa
-;
-; format-volume = <label-volume> <bar-volume>
-; label-volume = VOL
-; label-volume-foreground = ${root.foreground}
-;
-; format-muted-prefix = " "
-; format-muted-foreground = ${colors.foreground-alt}
-; label-muted = sound muted
-;
-; bar-volume-width = 10
-; bar-volume-foreground-0 = #55aa55
-; bar-volume-foreground-1 = #55aa55
-; bar-volume-foreground-2 = #55aa55
-; bar-volume-foreground-3 = #55aa55
-; bar-volume-foreground-4 = #55aa55
-; bar-volume-foreground-5 = #f5a70a
-; bar-volume-foreground-6 = #ff5555
-; bar-volume-gradient = false
-; bar-volume-indicator = |
-; bar-volume-indicator-font = 2
-; bar-volume-fill = ─
-; bar-volume-fill-font = 2
-; bar-volume-empty = ─
-; bar-volume-empty-font = 2
-; bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -363,13 +307,11 @@ format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 =     
-ramp-capacity-1 =     
-ramp-capacity-2 =    
+ramp-capacity-1 =    
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 =     
-animation-charging-1 =     
-animation-charging-2 =    
+animation-charging-1 =   
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
@@ -378,25 +320,6 @@ animation-discharging-1 = 
 animation-discharging-2 =     
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
-
-; [module/temperature]
-; type = internal/temperature
-; thermal-zone = 0
-; warn-temperature = 60
-;
-; format = <ramp> <label>
-; format-underline = #f50a4d
-; format-warn = <ramp> <label-warn>
-; format-warn-underline = ${self.format-underline}
-;
-; label = %temperature-c%
-; label-warn = %temperature-c%
-; label-warn-foreground = ${colors.secondary}
-;
-; ramp-0 = 
-; ramp-1 = 
-; ramp-2 = 
-; ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/menu
@@ -433,7 +356,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
+; pseudo-transparency = true;
 
 [global/wm]
 margin-top = 0
