@@ -1,6 +1,5 @@
-export EDITOR='nvim'
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 ZSH_DISABLE_COMPFIX="true"
 source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
@@ -14,3 +13,4 @@ if ! zgen saved; then
 fi
 # aliasing
 alias vim="nvim"
+alias vifm="vifm ."
