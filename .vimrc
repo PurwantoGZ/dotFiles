@@ -124,6 +124,11 @@ noremap <silent> <leader>mp  :MarkdownPreview<CR>
 noremap <silent> <Leader>jc  :!javac %<CR>
 noremap <silent> <Leader>jr  :!java
 
+" java
+noremap <silent> <Leader>rb  :!cargo build<CR>
+noremap <silent> <Leader>rr  :!cargo run<CR>
+noremap <silent> <Leader>rc  :!cargo check<CR>
+
 " nerdtree
 noremap <silent> <Leader>n   :NERDTreeFind<CR>
 
@@ -131,7 +136,8 @@ noremap <silent> <Leader>n   :NERDTreeFind<CR>
 noremap <silent> <Leader>y "+y
 
 " put from clipboard
-noremap <silent> <Leader>p "+gP
+" noremap <silent> <Leader>p "+P<CR><ESC>
+noremap <silent> <Leader>p "+p
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""

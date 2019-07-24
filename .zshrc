@@ -1,10 +1,13 @@
+ZSH_DISABLE_COMPFIX="true"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-ZSH_DISABLE_COMPFIX="true"
+source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
 source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
 
   # specify plugins here
+  zgen load zsh-users/zsh-completions
   zgen load subnixr/minimal
   zgen oh-my-zsh
 
@@ -13,4 +16,5 @@ if ! zgen saved; then
 fi
 # aliasing
 alias vim="nvim"
-alias vifm="vifm ."
+alias fm="sudo nnn"
+alias mand="fusermount -u cell/"

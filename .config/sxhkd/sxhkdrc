@@ -1,4 +1,10 @@
-#
+# change language
+alt + shift + u
+  setxkbmap  -layout us
+
+alt + shift + a
+  setxkbmap  -layout ara 
+
 # wm independent hotkeys
 #
 #super + {_,shift + }w
@@ -11,9 +17,9 @@ super + Return
 super + u
   st -e yay
 
-# ranger
+# nnn
 super + e
-  st -e ranger
+  st -e nnn 
 
 # spotify
 super + s
@@ -30,10 +36,6 @@ super + f
 # rofi
 super + r
   rofi -show drun
-
-# rofi
-super + ctrl + r
-  rofi -show run
 
 # close and kill
 super + q
@@ -151,3 +153,7 @@ Print
   scrot 'Screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/pic/Screenshots/'
 shift + Print
   scrot -u 'Screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/pic/Screenshots/'
+alt + Print
+  scrot -s 'Screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/pic/Screenshots/'
+ctrl + Print
+  scrot -s 'Screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/pic/Screenshots/'

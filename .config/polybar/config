@@ -19,7 +19,7 @@
 ; oceanicnext color
 [colors]
 foreground = #d8dee9
-background = #1b2b34
+background = #d01b2b34
 foreground-alt = #a7adba
 background-alt = #343d46
 primary = #6699cc
@@ -32,7 +32,7 @@ brown = #ab7967
 alert = #fac863
 
 [bar/alfianbar]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 27
 bottom = false
@@ -58,8 +58,8 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Monaco:size=10:antialias=true;0
-font-1 = FontAwesome:size=10:antialias=true;0
+font-0 = Code New Roman:italic:size=10:antialias=true;0
+font-1 = FontAwesome:italic:size=10:antialias=true;0
 font-2 = Noto Color Emoji:pixelsize=10:scale=10;0
 
 modules-left = bspwm

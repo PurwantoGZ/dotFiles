@@ -1,6 +1,6 @@
 /* !!! Rofi config file !!! */
 rofi.lines                : 15
-rofi.font                 : Monaco 12
+rofi.font                 : CodeNewRoman Nerd Font 13
 rofi.padding              : 48
 /* rofi.fake-transparency    : false */
 rofi.show-icons           : true
