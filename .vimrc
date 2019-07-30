@@ -21,13 +21,15 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'mhartington/oceanic-next'
 
 " tools
+Plugin 'junegunn/limelight.vim'
+Plugin 'junegunn/goyo.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Bundle 'matze/vim-move'
 Plugin 'godlygeek/tabular'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'wakatime/vim-wakatime'
+" Plugin 'wakatime/vim-wakatime'
 Plugin 'airblade/vim-gitgutter'
 
 " wrapper
@@ -132,6 +134,9 @@ noremap <silent> <Leader>rc  :!cargo check<CR>
 " nerdtree
 noremap <silent> <Leader>n   :NERDTreeFind<CR>
 
+" nerdtree
+noremap <silent> <Leader>g   :Goyo<CR>
+
 " yank into clipboard
 noremap <silent> <Leader>y "+y
 
@@ -182,8 +187,8 @@ let g:mkdp_port = ''
 let g:mkdp_page_title = '「${name}」'
 
 " nerdtreeConfig
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " nerdtreeGit
 let g:NERDTreeIndicatorMapCustom = {
@@ -216,3 +221,8 @@ inoremap <silent><expr> <Tab>
 " gitGutter
 set updatetime=0
 autocmd BufWritePost * GitGutter
+
+autocmd VimEnter * Goyo
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
