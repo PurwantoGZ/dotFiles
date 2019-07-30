@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/usr/share/locale'
+let g:netrw_dirhist_2='/usr/share/i18n/locales'
+let g:netrw_dirhist_3='/home/alfianguide/.vim'
+let g:netrw_dirhist_4='/etc/X11/xorg.conf.d'
+let g:netrw_dirhist_5='/usr/share/xsessions'
+let g:netrw_dirhist_6='/home/alfianguide/.config'
+let g:netrw_dirhist_7='/home/alfianguide/prj/github/alfianguide/blogger/.git'
+let g:netrw_dirhist_8='/home/alfianguide/.vim'
+let g:netrw_dirhist_9='/home/alfianguide/doc/notes'

@@ -58,7 +58,7 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Code New Roman:italic:size=10:antialias=true;0
+font-0 = Fira Code:italic:size=10:antialias=true;0
 font-1 = FontAwesome:italic:size=10:antialias=true;0
 font-2 = Noto Color Emoji:pixelsize=10:scale=10;0
 

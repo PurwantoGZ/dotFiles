@@ -1,0 +1,11 @@
+
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+image/jpg=sxiv.desktop
+text/markdown=nvim.desktop
+text/plain=nvim.desktop
+application/vnd.ms-excel=libreoffice-calc.desktop
+video/mp4=mpv.desktop
+video/webm=mpv.desktop
+image/jpeg=sxiv.desktop;
+image/png=sxiv.desktop;
