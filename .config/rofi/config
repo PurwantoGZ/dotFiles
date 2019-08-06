@@ -1,21 +1,21 @@
 /* !!! Rofi config file !!! */
-rofi.lines                : 15
-rofi.font                 : Sans Serif 13
-rofi.padding              : 48
-/* rofi.fake-transparency    : false */
-rofi.show-icons           : true
-rofi.theme                : ~/.config/rofi/theme/oceanicnext.rasi
-/* rofi.display-window       : Window: */
-rofi.display-drun         : Apps
-rofi.display-run          : Cmmd 
-/* rofi.display-keys         : key: */
-/* rofi.sidebar-mode         : false */
-rofi.modi                 : drun,run
-/* rofi.show                 : drun */
-/* rofi.drun-match-fields    : name */
-/* rofi.window-match-fields  : name */
-/* rofi.columns              : 1 */
-rofi.width                : 500
-/* rofi.columns              : 1 */
-rofi.terminal             : st
-/* !rofi.pid                  : /tmp/rofi.pid */
+rofi.lines                     : 10
+rofi.font                      : Sans Serif 13
+rofi.padding                   : 48
+/* rofi.fake-transparency      : false */
+rofi.show-icons                : true
+rofi.theme                     : ~/.config/rofi/theme/oceanicnext.rasi
+/* rofi.display-window         : Window                                : */
+rofi.display-drun              : Apps
+rofi.display-run               : Cmmd
+/* rofi.display-keys           : key                                   : */
+/* rofi.sidebar-mode           : false */
+rofi.modi                      : drun,run
+/* rofi.show                   : drun */
+/* rofi.drun-match-fields      : name */
+/* rofi.window-match-fields    : name */
+/* rofi.columns                : 1 */
+rofi.width                     : 500
+/* rofi.columns                : 1 */
+rofi.terminal                  : st
+/* !rofi.pid                   : /tmp/rofi.pid */
