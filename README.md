@@ -42,5 +42,17 @@ And the rest into it's respective folder. I know you know.
 
 Or, I know you were advance, perhaps you wanna peek into my .vimrc heheh.
 
-# Have Fun :love: :)
+## Screenshots
+
+Desktop
+![Vim](desktop.png "Vim Plugin")
+
+Vim
+![Vim](vim.png "Vim Plugin")
+
+The Rest?
+
+Check it yourself heheh
+
+## Have Fun :)
 
