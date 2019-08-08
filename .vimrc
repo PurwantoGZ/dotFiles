@@ -1,50 +1,47 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                "  
 "         Alfian's   .vimrc   config             "
 "                                                "  
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "   Welcome   to   my   config,   taste   it!    "
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"   Vundle   Plugin   Manager                    "
+"                Vim Plug Manager                "
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible               
 filetype off                   
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" default
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " theming
-Plugin 'itchyny/lightline.vim'
-Plugin 'mhartington/oceanic-next'
+Plug 'itchyny/lightline.vim'
+Plug 'mhartington/oceanic-next'
 
 " tools
-Plugin 'junegunn/limelight.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'xuyuanp/nerdtree-git-plugin'
-Bundle 'matze/vim-move'
-Plugin 'godlygeek/tabular'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'wakatime/vim-wakatime'
-Plugin 'airblade/vim-gitgutter'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'matze/vim-move'
+Plug 'godlygeek/tabular'
+Plug 'tomtom/tcomment_vim'
+Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'wakatime/vim-wakatime'
+Plug 'airblade/vim-gitgutter'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " wrapper
-Plugin 'tpope/vim-fugitive'
-Plugin 'iamcco/markdown-preview.nvim'
+Plug 'tpope/vim-fugitive'
+Plug 'kurocode25/mdforvim'
 
 " programmingLanguage
-Plugin 'sheerun/vim-polyglot'
-Plugin 'ap/vim-css-color'
+Plug 'sheerun/vim-polyglot'
+Plug 'ap/vim-css-color'
 
 " linter
-Plugin 'neoclide/coc.nvim'
-Plugin 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'w0rp/ale'
 
-call vundle#end()            
+call plug#end()
 filetype plugin indent on   
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "                    Config                      "
@@ -146,7 +143,7 @@ noremap <silent> <Leader>p "+p
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"                   Plugin Config                "
+"                   Plug Config                "
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 " lightLine
@@ -185,10 +182,6 @@ let g:mkdp_markdown_css = ''
 let g:mkdp_highlight_css = ''
 let g:mkdp_port = ''
 let g:mkdp_page_title = '「${name}」'
-
-" nerdtreeConfig
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " nerdtreeGit
 let g:NERDTreeIndicatorMapCustom = {
