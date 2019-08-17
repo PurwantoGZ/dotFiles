@@ -3,4 +3,7 @@ xsetroot -cursor_name left_ptr &
 exec feh --bg-scale "$HOME/pic/minimalist.png" &
 xrandr --setprovideroutputsource modesetting NVIDIA-0 &
 xrandr --auto &
+sxhkd &
+polybar alfianbar &
+compton &
 exec bspwm 

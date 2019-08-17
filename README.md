@@ -45,10 +45,12 @@ Or, I know you were advance, perhaps you wanna peek into my .vimrc heheh.
 ## Screenshots
 
 Desktop
+
 ![Vim](desktop.png "Vim Plugin")
 
 Vim
-![Vim](vim.png "Vim Plugin")
+
+Under Construction
 
 The Rest?
 
@@ -56,3 +58,7 @@ Check it yourself heheh
 
 ## Have Fun :)
 
+
+## Self Notes
+
+Never use obsolet/unmaintained/abandoned thing! if it's not work!
