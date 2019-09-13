@@ -24,20 +24,19 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'matze/vim-move'
 Plug 'godlygeek/tabular'
 Plug 'tomtom/tcomment_vim'
-Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-gitgutter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " wrapper
-Plug 'tpope/vim-fugitive'
-Plug 'kurocode25/mdforvim'
+" Plug 'tpope/vim-fugitive'
 
 " programmingLanguage
 Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
 
 " linter
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 
@@ -91,16 +90,26 @@ cnoreabbrev Qall qall
 " handleAllMappingCommand
 let mapleader=','
 
+" yank into clipboard
+noremap <silent> <Leader>y "+y
+
+" put from clipboard
+" noremap <silent> <Leader>p "+P<CR><ESC>
+noremap <silent> <Leader>p "+p
+
 " save
 noremap <silent> <Leader>s   :w<CR>
 noremap <silent> <Leader>wq  :wq<CR>
 noremap <silent> <Leader>e  :q!<CR>
 
+" sourcing
+noremap <silent> <Leader>x  :source %<CR>
+
 " find
 noremap <silent> <Leader>f /
 
 " split
-noremap <silent> <Leader>l  :split<CR>
+noremap <silent> <Leader>v  :vsplit<CR>
 
 " replace
 noremap <silent> <Leader>r   :%s/
@@ -123,7 +132,7 @@ noremap <silent> <leader>mp  :MarkdownPreview<CR>
 noremap <silent> <Leader>jc  :!javac %<CR>
 noremap <silent> <Leader>jr  :!java
 
-" java
+" rust
 noremap <silent> <Leader>rb  :!cargo build<CR>
 noremap <silent> <Leader>rr  :!cargo run<CR>
 noremap <silent> <Leader>rc  :!cargo check<CR>
@@ -131,15 +140,11 @@ noremap <silent> <Leader>rc  :!cargo check<CR>
 " nerdtree
 noremap <silent> <Leader>n   :NERDTreeFind<CR>
 
-" nerdtree
+" goyo 
 noremap <silent> <Leader>g   :Goyo<CR>
 
-" yank into clipboard
-noremap <silent> <Leader>y "+y
-
-" put from clipboard
-" noremap <silent> <Leader>p "+P<CR><ESC>
-noremap <silent> <Leader>p "+p
+" prettier
+noremap <silent> <Leader>l   :Prettier<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -155,9 +160,6 @@ set noshowmode
 let g:ale_sign_error   = 'X'
 let g:ale_sign_warning = '⚠️'
 let g:ale_fix_on_save  = 1
-
-" indentGuide
-let g:indent_guides_enable_on_vim_startup = 1
 
 " markdownPreview
 let g:mkdp_auto_start = 0
@@ -215,7 +217,7 @@ inoremap <silent><expr> <Tab>
 set updatetime=0
 autocmd BufWritePost * GitGutter
 
-autocmd VimEnter * Goyo
+" autocmd VimEnter * Goyo
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!

@@ -1,7 +1,5 @@
 # dotFiles
 
-My collections of dotFiles
-
 [![License](https://img.shields.io/github/license/alfianguide/dotFiles.svg?style=flat-square)](LICENSE)
 
 ## Usage
@@ -46,11 +44,11 @@ Or, I know you were advance, perhaps you wanna peek into my .vimrc heheh.
 
 Desktop
 
-![Vim](desktop.png "Vim Plugin")
+![Desktop](desktop.png "Desktop look")
 
 Vim
 
-Under Construction
+![Vim](vim.png "Vim Plugin")
 
 The Rest?
 
