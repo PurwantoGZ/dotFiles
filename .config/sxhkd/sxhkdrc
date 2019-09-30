@@ -1,3 +1,7 @@
+#
+# Apps
+#
+
 # change language
 alt + shift + u
   setxkbmap  -layout us
@@ -13,13 +17,9 @@ alt + shift + a
 super + Return
   st	
 
-# update
+# packettracer
 super + p
-  st -e echo "Fuck you"
-
-# update
-super + u
-  st -e yay
+  /opt/pt/packettracer
 
 # nnn
 super + e
@@ -62,8 +62,12 @@ super + shift + r
 	pkill -USR1 -x sxhkd
 
 #
-# bspwm hotkeys
+# bspwm power 
 #
+
+# suspend
+super + shift + s
+  sudo s2ram
 
 # quit/restart bspwm
 super + shift + {q,r}
@@ -74,7 +78,7 @@ super + shift + {q,r}
 #
 
 # set the window state
-super + {t,shift + t,s,F4}
+super + {t,shift + t,F3,F4}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -151,7 +155,10 @@ alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+#
 # Print
+#
+
 # Fullscreen
 Print
   scrot 'Screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/pic/Screenshots/'
