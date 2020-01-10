@@ -24,12 +24,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'matze/vim-move'
 Plug 'godlygeek/tabular'
 Plug 'tomtom/tcomment_vim'
-" Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-gitgutter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-
-" wrapper
-" Plug 'tpope/vim-fugitive'
 
 " programmingLanguage
 Plug 'sheerun/vim-polyglot'
@@ -110,6 +106,12 @@ noremap <silent> <Leader>f /
 
 " split
 noremap <silent> <Leader>v  :vsplit<CR>
+
+" keymap Split
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " replace
 noremap <silent> <Leader>r   :%s/
@@ -200,7 +202,7 @@ let g:NERDTreeIndicatorMapCustom = {
             \}
 
 " vimMove
-let g:move_key_modifier = 'C'
+let g:move_key_modifier = 'A'
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort

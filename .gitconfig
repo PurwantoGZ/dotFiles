@@ -1,0 +1,21 @@
+[user]
+	email = alfianguide@outlook.com
+	name = alfianguide
+	signingkey = 0F44CCD3746896D8
+[alias]
+	st = status
+	po = push origin
+	pod = push origin dev
+	pos = push origin staging
+	pom = push origin master
+	poh = push origin HEAD
+	plod = pull origin dev
+	plos = pull origin staging
+	plom = pull origin master
+	ploh = pull origin HEAD
+	unstage = reset --soft HEAD^
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	l = log --pretty=oneline --abbrev-commit
+	f = "!git ls-files | grep -i"
+[commit]
+	gpgSign = true
