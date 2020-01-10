@@ -50,3 +50,7 @@ end
 
 set PATH /home/alfianguide/.fnm $PATH
 fnm env --multi | source
+
+# fnm
+set PATH /home/alfianguide/.fnm $PATH
+fnm env --multi | source

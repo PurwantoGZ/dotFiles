@@ -39,7 +39,7 @@ super + f
 
 # rofi
 super + r
-  rofi -show drun
+  dmenu_run
 
 # close and kill
 super + q
